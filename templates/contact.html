@@ -1,0 +1,337 @@
+<!DOCTYPE html>{% load static %}
+<html lang="fa">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static "logo_hermes.png" %}" />
+    <meta name="keywords" content="طراحی دکوراسیون , هرمس چوب , هرمس , کابینت آشپزخانه , کابینت , آشپزخانه , کابینت های گلاس , آخرین مدل های کابینت , طراحی دکوراسیون آنلاین , کابینت ارزان قیمت , " />
+    <meta name="description" content="گروه دکوراسیون و کابینت هرمس پیشرو در طراحی و اجرای پروژه های طراحی دکوراسیون منزل و آشپزخانه. با استفاده از قابلیت طراحی آنلاین هرمس، میتوانید به راحتی و به صورت کاملا رایگان دکوراسیون آشپزخانه و منزل خود را طراحی کنید." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Salar">
+    <title>HERMES | طراحی دکوراسیون هرمس</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static "firstpage/font-awesome/css/font-awesome.min.css" %}" type="text/css">
+    <link rel="stylesheet" href="{% static "firstpage/fonts/fonts-fa.css" %}">
+    <link rel="stylesheet" href="{% static "firstpage/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "firstpage/css/line-icons.css" %}">
+    <link rel="stylesheet" href="{% static "firstpage/css/owl.carousel.css" %}">
+    <link rel="stylesheet" href="{% static "firstpage/css/owl.theme.css" %}">
+    <link rel="stylesheet" href="{% static "firstpage/css/nivo-lightbox.css" %}">
+    <link rel="stylesheet" href="{% static "firstpage/css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "firstpage/css/animate.css" %}">
+    <link rel="stylesheet" href="{% static "firstpage/css/menu_sideslide.css" %}">
+    <link rel="stylesheet" href="{% static "firstpage/css/main.css" %}">
+    <link rel="stylesheet" href="{% static "firstpage/css/responsive.css" %}">
+
+  </head>
+  
+  <body>
+    <!-- Header Section Start -->
+    <header id="slider-area" class="text-right">
+      <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+        <div class="container">          
+          <a class="navbar-brand" href="/design/">بخش طراحی دکوراسیون <i class="fa fa-pencil"></i></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="lni-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!--<ul class="navbar-nav mr-auto w-100 justify-content-end">-->
+              <ul class="navbar-nav mr-auto w-100 text-right" style="direction: rtl">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="../">بازگشت به صفحه اصلی</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Header Section End --> 
+
+    <!-- Services Section Start -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="section" style="direction: rtl">
+      <div class="contact-form">
+        <div class="container">
+          <div class="section-header text-right">
+            <h2 class="section-title">ارتباط با ما</h2>
+            <p class="section-subtitle">لطفا از طریق راه های ارتباطی زیر با گروه دکوراسیون هرمس در تماس باشید.</p>
+          </div>
+          <div class="row">          
+            <div class="col-lg-9 col-md-9 col-xs-12">
+              <div class="contact-block">
+                <form id="contactForm" enctype="multipart/form-data" action='#' method="post">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="نام" required data-error="لطفا نام خود را وارد نمایید">
+                        <div class="help-block with-errors"></div>
+                      </div>                                 
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" placeholder="آدرس ایمیل" id="email" class="form-control" name="email" required data-error="لطفا آدرس ایمیل خود را وارد نمایید">
+                        <div class="help-block with-errors"></div>
+                      </div> 
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="text" placeholder="موضوع" id="msg_subject" class="form-control" name="msg_subject" required data-error="لطفا موضوع رو وارد نمایید">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group"> 
+                        <textarea class="form-control" id="message" placeholder="متن پیام" rows="7" name="message" data-error="لطفا پیام خود را بنویسید" required></textarea>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="submit-button">
+                        <button class="btn btn-common btn-effect" id="submit" type="button">ارسال پیام</button>
+                        <div id="msgSubmit" class="h3 hidden"></div> 
+                        <div class="clearfix"></div> 
+                      </div>
+                    </div>
+                      {% csrf_token %}
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-12">
+              <div class="contact-deatils text-right">
+                <!-- Content Info -->
+                <div class="contact-info_area">
+                  <div class="contact-info">
+                    <i class="lni-map"></i>
+                    <h5>آدرس کارگاه:</h5>
+                    <p>شهریار، نرسیده به باغستان، شهرک شهاب سنگ</p>
+                  </div>
+                  <!-- Content Info -->
+                  <div class="contact-info">
+                    <i class="lni-envelope"></i>
+                    <h5>ایمیل:</h5>
+                    <p>choob.hermes@gmail.com</p>
+                  </div>
+                  <!-- Content Info -->
+                  <div class="contact-info">
+                    <i class="lni-phone"></i>
+                    <h5>تلفن تماس:</h5>
+                    <!--<p style="direction: ltr">۰۲۱-۳۴۳۲۴۳۲۴</p>-->
+                      <p style="direction: ltr">۰۲۱-۸۸۲۴۸۲۷۸</p>
+                      <p style="direction: ltr">۰۲۱-۶۵۵۵۶۳۹۲</p>
+                    <p style="direction: ltr">۰۹۳۵-۴۵۵۷۰۶۹</p>
+                  </div>
+                  <!-- Icon -->
+                  <ul class="footer-social">
+                    <li><a class="facebook" href=""><i class="lni-facebook-filled"></i></a></li>
+                    <li><a class="twitter" href=""><i class="lni-instagram-filled"></i></a></li>
+                    <!--<li><a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a></li>
+                    <li><a class="google-plus" href="#"><i class="lni-google-plus"></i></a></li>-->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>            
+    </section>
+    <!-- Contact Section End -->
+    
+    <!-- Map Section Start -->
+    <section id="google-map-area">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 padding-0">
+            <iframe style="border:0; height: 450px; width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.209026173109!2d51.17942105122057!3d35.64722138010504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8df9ff84b23741%3A0xb7ace479d284de59!2sShahrak-e-Shahab%20Sang%2C%20Baghestan%2C%20Tehran%20Province%2C%20Iran!5e0!3m2!1sen!2sde!4v1574618568017!5m2!1sen!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              <!--<object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34015.943594576835!2d-106.43242624069771!3d31.677719472407432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d90e99d597b%3A0x6cd3eb9a9fcd23f1!2sCourtyard+by+Marriott+Ciudad+Juarez!5e0!3m2!1sen!2sbd!4v1533791187584"></object>-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Map Section End -->
+
+    <!-- Modal message received-->
+  <div class="modal" tabindex="-1" role="dialog" id="messagereceived" style="direction: rtl">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="font-size: 1.25rem;">پیام شما دریافت شد</h5>
+        </button>
+      </div>
+      <div class="modal-body text-right">
+        <p>مشتری گرامی ممنون از حسن توجه و پیام شما. در اسرع وقت پیام شما توسط همکاران ما پاسخ داده خواهد شد.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-common btn-effect" data-dismiss="modal" style="padding: 5px 15px;">بستن پنجره</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal message received-->
+
+
+
+    <!-- Footer Section Start -->
+      <!-- Footer Area Start
+      <section class="footer-Content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <h3>Essence</h3>
+              <div class="textwidget">
+                <p>If you think you have the passion, 
+                attitude and capability to join us 
+                the next big software company
+                s so that we can get the convers.</p>
+              </div>
+              <ul class="footer-social">
+                <li><a class="facebook" href="#"><i class="lni-facebook-filled"></i></a></li>
+                <li><a class="twitter" href="#"><i class="lni-twitter-filled"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a></li>
+                <li><a class="google-plus" href="#"><i class="lni-google-plus"></i></a></li>
+              </ul> 
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div class="widget">
+                <h3 class="block-title">Short Link</h3>
+                <ul class="menu">
+                  <li><a href="#">Service</a></li>
+                  <li><a href="#">Wishlist</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Advance Sarch</a></li>
+                  <li><a href="#">Site Map</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div class="widget">
+                <h3 class="block-title">Contact Us</h3>
+                <ul class="contact-footer">
+                  <li>
+                    <strong>Address :</strong> <span>1900 Pico Blvd, New York br Centernial, colorado</span>
+                  </li>
+                  <li>
+                    <strong>Phone :</strong> <span>+48 123 456 789</span>
+                  </li>
+                  <li>
+                    <strong>E-mail :</strong> <span><a href="#">info@example.com</a></span>
+                  </li>
+                </ul> 
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div class="widget">
+                <h3 class="block-title">Instagram</h3>
+                <ul class="instagram-footer">
+                  <li><a href="#"><img src="img/instagram/insta1.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="img/instagram/insta2.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="img/instagram/insta3.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="img/instagram/insta4.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="img/instagram/insta5.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="img/instagram/insta6.jpg" alt=""></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>-->
+      <!-- Footer area End -->
+      
+      <!-- Copyright Start  -->
+       <div id="copyright" style="direction: rtl;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="site-info float-right">
+                <p>تمامی حقوق این وبسایت به <a href=".." rel="nofollow">گروه هرمس</a> تعلق دارد</p>
+              </div>
+              <div class="float-left">
+                <ul class="nav nav-inline">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="../">خانه</a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright End -->
+
+    <!-- Footer Section End -->
+
+    <!-- Go To Top Link -->
+    <div id="loader">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>    
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="{% static "firstpage/js/jquery-min.js" %}"></script>
+    <script src="{% static "firstpage/js/popper.min.js" %}"></script>
+    <script src="{% static "firstpage/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "firstpage/js/classie.js" %}"></script>
+    <script src="{% static "firstpage/js/jquery.mixitup.js" %}"></script>
+    <script src="{% static "firstpage/js/nivo-lightbox.js" %}"></script>
+    <script src="{% static "firstpage/js/owl.carousel.js" %}"></script>
+    <script src="{% static "firstpage/js/jquery.stellar.min.js" %}"></script>
+    <script src="{% static "firstpage/js/jquery.nav.js" %}"></script>
+    <script src="{% static "firstpage/js/scrolling-nav.js" %}"></script>
+    <script src="{% static "firstpage/js/jquery.easing.min.js" %}"></script>
+    <script src="{% static "firstpage/js/wow.js" %}"></script>
+    <script src="{% static "firstpage/js/jquery.vide.js" %}"></script>
+    <script src="{% static "firstpage/js/jquery.counterup.min.js" %}"></script>
+    <script src="{% static "firstpage/js/jquery.magnific-popup.min.js" %}"></script>
+    <script src="{% static "firstpage/js/waypoints.min.js" %}"></script>
+    <script src="{% static "firstpage/js/form-validator.min.js" %}"></script>
+    <script src="{% static "firstpage/js/contact-form-script.js" %}"></script>
+    <script src="{% static "firstpage/js/main.js" %}"></script>
+
+
+<script>
+
+      function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+    $("#submit").click(function() {
+        var frm = $('#contactForm');
+    	$.ajax({
+            type: "POST",
+            headers: {'X-CSRFToken': csrftoken},
+            url: "/contactform/",
+            data: frm.serialize(),
+            success: function(json) {
+                $('#messagereceived').modal('show');
+        },
+        error: function() {
+                alert("DDD");
+            $('#messagereceived').modal('show');
+        }
+});
+    });
+</script>
+
+
+<script>
+window.onload = function() {
+    document.getElementById("contact").style.minHeight = ($(window).height()-500).toString()+"px";
+}
+</script>
+</body>
+</html>

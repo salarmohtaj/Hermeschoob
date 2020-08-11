@@ -1,0 +1,271 @@
+<!DOCTYPE html>{% load static %}
+<html>
+  <head>
+      <title>طراحی دکوراسیون هرمس</title>
+    <meta charset="UTF-8">
+	  <link rel="shortcut icon" href="{% static "first_page/img/title_logo_3.png" %}" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta property='og:image' content='//static/first_page/img/title_logo_3.png'>
+
+
+
+
+
+      <link href="{% static "designpage/css/bootstrap.css" %}" rel="stylesheet">
+      <link href="{% static "designpage/css/example.css" %}" rel="stylesheet">
+      <script src="{% static "designpage/js/three.min.js" %}"></script>
+      <script src="{% static "designpage/js/blueprint3d.js" %}"></script>
+      <script src="{% static "designpage/js/jquery.js" %}"></script>
+      <script src="{% static "designpage/js/bootstrap.js" %}"></script>
+      <script src="{% static "designpage/js/items.js" %}"></script>
+      <script src="{% static "designpage/js/example.js" %}"></script>
+
+<!--<script src="{% static "plugins/jQuery/jQuery-2.1.4.min.js" %}"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+    <script src="{% static "designpage/bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "designpage/dist/js/app.min.js" %}"></script>
+
+
+    <link rel="stylesheet" href="{% static "designpage/bootstrap/css/bootstrap.min.css" %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static "designpage/dist/css/AdminLTE.min.css" %}">
+    <link rel="stylesheet" href="{% static "designpage/dist/fonts/fonts-fa.css" %}">
+    <link rel="stylesheet" href="{% static "designpage/dist/css/bootstrap-rtl.min.css" %}">
+    <link rel="stylesheet" href="{% static "designpage/mycss.css" %}">
+
+
+
+    
+        
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body class="skin-blue sidebar-mini">
+    <div class="wrapper" >
+
+    <div class="container-fluid">
+      <div class="row main-row">
+        <!-- Left Column -->
+        <div class="col-xs-3 sidebar">
+          <!-- Main Navigation -->
+          <ul class="nav nav-sidebar">
+            <li id="floorplan_tab"><a href="#">
+              تغییر نقشه اتاق
+              <span class="glyphicon glyphicon-chevron-left pull-left"></span>
+            </a></li>
+            <li id="design_tab"><a href="#">
+              طراحی
+              <span class="glyphicon glyphicon-chevron-left pull-left"></span>
+            </a></li>
+            <li id="items_tab"><a href="#">
+              اضافه کردن وسیله
+              <span class="glyphicon glyphicon-chevron-left pull-left"></span>
+            </a></li>
+          </ul>
+          <hr />
+
+          <!-- Context Menu -->
+          <div id="context-menu">
+            <div style="margin: 0 20px">
+              <span id="context-menu-name" class="lead"></span>
+              <br /><br />
+              <button class="btn btn-block btn-danger" id="context-menu-delete">
+                <span class="glyphicon glyphicon-trash"></span>
+                حذف وسیله
+              </button>
+            <br />
+            <div class="panel panel-default">
+              <div class="panel-heading">تغییر اندازه</div>
+              <div class="panel-body" style="color: #333333">
+
+                <div class="form form-horizontal" class="lead">
+                  <div class="form-group">
+                    <label class="col-sm-5 control-label">
+                       عرض
+                    </label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" id="item-width">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-5 control-label">
+                      عمق
+                    </label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" id="item-depth">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-5 control-label">
+                      ارتفاع
+                    </label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" id="item-height">
+                    </div>
+                  </div>
+                </div>
+                <small><span class="text-muted">Measurements in inches.</span></small>
+              </div>
+            </div>
+
+            <label><input type="checkbox" id="fixed" /> وسیله جابجا نشود</label>
+            <br /><br />
+            </div>
+          </div>
+
+          <!-- Floor textures -->
+          <div id="floorTexturesDiv" style="display:none; padding: 0 20px">
+            <div class="panel panel-default">
+              <div class="panel-heading">تغییر پوشش کف</div>
+              <div class="panel-body" style="color: #333333">
+
+                <div class="col-sm-6" style="padding: 3px">
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="{% static "designpage/rooms/textures/light_fine_wood.jpg" %}" texture-stretch="false" texture-scale="300">
+                    <img alt="Thumbnail light fine wood" src="{% static "designpage/rooms/thumbnails/thumbnail_light_fine_wood.jpg" %}" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wall Textures -->
+          <div id="wallTextures" style="display:none; padding: 0 20px">
+            <div class="panel panel-default">
+              <div class="panel-heading">تغییر پوشش دیوار</div>
+              <div class="panel-body" style="color: #333333">
+                <div class="col-sm-6" style="padding: 3px">
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="{% static "designpage/rooms/textures/marbletiles.jpg" %}" texture-stretch="false" texture-scale="300">
+                    <img alt="Thumbnail marbletiles" src="{% static "designpage/rooms/thumbnails/thumbnail_marbletiles.jpg" %}" />
+                  </a>
+                </div>
+                <div class="col-sm-6" style="padding: 3px">
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="{% static "designpage/rooms/textures/wallmap_yellow.png" %}" texture-stretch="true" texture-scale="">
+                    <img alt="Thumbnail wallmap yellow" src="{% static "designpage/rooms/thumbnails/thumbnail_wallmap_yellow.png" %}" />
+                  </a>
+                </div>
+                <div class="col-sm-6" style="padding: 3px">
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="{% static "designpage/rooms/textures/light_brick.jpg" %}" texture-stretch="false" texture-scale="100">
+                    <img alt="Thumbnail light brick" src="{% static "designpage/rooms/thumbnails/thumbnail_light_brick.jpg" %}" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-xs-9 main">
+
+          <!-- 3D Viewer -->
+          <div id="viewer">
+
+            <div id="main-controls">
+              <a href="#" class="btn btn-default btn-sm" id="new">
+                New Plan
+              </a>
+              <a href="#" class="btn btn-default btn-sm" id="saveFile">
+                Save Plan
+              </a>
+              <a class="btn btn-sm btn-default btn-file">
+               <input type="file" class="hidden-input" id="loadFile">
+               Load Plan
+              </a>
+            </div>
+
+            <div id="camera-controls">
+              <a href="#" class="btn btn-default bottom" id="zoom-out">
+                <span class="glyphicon glyphicon-zoom-out"></span>
+              </a>
+              <a href="#" class="btn btn-default bottom" id="reset-view">
+                <span class="glyphicon glyphicon glyphicon-home"></span>
+              </a>
+              <a href="#" class="btn btn-default bottom" id="zoom-in">
+                <span class="glyphicon glyphicon-zoom-in"></span>
+              </a>
+
+              <span>&nbsp;</span>
+
+              <a class="btn btn-default bottom" href="#" id="move-left" >
+                <span class="glyphicon glyphicon-arrow-left"></span>
+              </a>
+              <span class="btn-group-vertical">
+                <a class="btn btn-default" href="#" id="move-up">
+                  <span class="glyphicon glyphicon-arrow-up"></span>
+                </a>
+                <a class="btn btn-default" href="#" id="move-down">
+                  <span class="glyphicon glyphicon-arrow-down"></span>
+                </a>
+              </span>
+              <a class="btn btn-default bottom" href="#" id="move-right" >
+                <span class="glyphicon glyphicon-arrow-right"></span>
+              </a>
+            </div>
+
+            <div id="loading-modal">
+              <h1>Loading...</h1>
+            </div>
+          </div>
+
+          <!-- 2D Floorplanner -->
+          <div id="floorplanner">
+            <canvas id="floorplanner-canvas"></canvas>
+            <div id="floorplanner-controls">
+
+              <button id="move" class="btn btn-sm btn-default">
+                <span class="glyphicon glyphicon-move"></span>
+                جابجایی دیوار
+              </button>
+              <button id="draw" class="btn btn-sm btn-default">
+                <span class="glyphicon glyphicon-pencil"></span>
+                اضافه کردن دیوار
+              </button>
+              <button id="delete" class="btn btn-sm btn-default">
+                <span class="glyphicon glyphicon-remove"></span>
+               حذف دیوار
+              </button>
+              <span class="pull-left">
+                <button class="btn btn-primary btn-sm" id="update-floorplan">انجام شد &raquo;</button>
+              </span>
+
+            </div>
+            <div id="draw-walls-hint">
+              Press the "Esc" key to stop drawing walls
+            </div>
+          </div>
+
+          <!-- Add Items -->
+          <div id="add-items">
+            <div class="row" id="items-wrapper">
+
+              <!-- Items added here by items.js -->
+            </div>
+          </div>
+
+        </div>
+        <!-- End Right Column -->
+      </div>
+    </div>
+</div>
+
+     
+      <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+   
+    
+
+    <!-- Sparkline -->
+      </body>
+
+</html>

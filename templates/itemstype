@@ -1,0 +1,21 @@
+            1: Items.FloorItem,
+            2: Items.WallItem,
+            3: Items.InWallItem,
+            7: Items.InWallFloorItem,
+            8: Items.OnFloorItem,
+            9: Items.WallFloorItem
+
+
+
+
+            240X
+
+slider images
+https://www.google.com/search?hl=en&biw=2503&bih=928&tbm=isch&sxsrf=ACYBGNQQs576qhonJ2GrOlCQQ_LkkX4MgA%3A1573204786853&sa=1&ei=MjPFXaPXM9LHwQKr25XIDA&q=kitchen+3d+imagesize%3A2560x650&oq=kitchen+3d+imagesize%3A2560x650&gs_l=img.3...24820.25265..25512...0.0..0.66.172.3......0....1..gws-wiz-img.oGtZKCfyg7A&ved=0ahUKEwijuOrDpNrlAhXSY1AKHattBckQ4dUDCAY&uact=5
+
+
+
+
+ALTER DATABASE kitchen DEFAULT CHARACTER SET utf8;
+
+conda install -c conda-forge mysqlclient

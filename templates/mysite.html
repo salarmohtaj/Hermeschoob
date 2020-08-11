@@ -1,0 +1,435 @@
+<!DOCTYPE html>{% load static %}
+<html lang="fa">
+  <head>
+    <title>HERMES | طراحی دکوراسیون هرمس</title>
+
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{% static "logo_hermes.png" %}" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="author" content="Salar">
+    <meta name="keywords" content="طراحی دکوراسیون , هرمس چوب , هرمس , کابینت آشپزخانه , کابینت , آشپزخانه , کابینت های گلاس , آخرین مدل های کابینت , طراحی دکوراسیون آنلاین , کابینت ارزان قیمت , " />
+    <meta name="description" content="گروه دکوراسیون و کابینت هرمس پیشرو در طراحی و اجرای پروژه های طراحی دکوراسیون منزل و آشپزخانه. با استفاده از قابلیت طراحی آنلاین هرمس، میتوانید به راحتی و به صورت کاملا رایگان دکوراسیون آشپزخانه و منزل خود را طراحی کنید." />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta property='og:image' content="{% static "logo_hermes.png" %}">
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{% static "designpage/js/jquery.js" %}"></script>
+    <!--<link rel="stylesheet" href="{% static "designpage/dist/css/bootstrap-rtl.min.css" %}">-->
+    <link href="{% static "designpage/css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "designpage/css/example.css" %}" rel="stylesheet">
+    <script src="{% static "designpage/js/three.min.js" %}"></script>
+    <script src="{% static "designpage/js/blueprint3d.js" %}"></script>
+    <script src="{% static "designpage/js/bootstrap.js" %}"></script>
+    <script src="{% static "designpage/js/items.js" %}"></script>
+    <link rel="stylesheet" href="{% static "designpage/dist/css/AdminLTE.min.css" %}">
+
+
+
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script src="{% static "designpage/dist/js/app.min.js" %}"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static "designpage/dist/fonts/fonts-fa.css" %}">
+    <link rel="stylesheet" href="{% static "designpage/mycss.css" %}">
+
+    <script src="{% static "designpage/js/example.js" %}"></script>
+    <link href="{% static "designpage/introjs/introjs.css" %}" rel="stylesheet">
+    <link href="{% static "designpage/introjs/introjs-rtl.css" %}" rel="stylesheet">
+    <script src="{% static "designpage/introjs/intro.js" %}"></script>
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <![endif]-->
+
+  </head>
+  <body class="skin-blue sidebar-mini">
+    <div class="wrapper" >
+
+    <div class="container-fluid">
+      <div class="row main-row">
+        <!-- Left Column -->
+        <div class="col-xs-3 sidebar">
+          <!-- Main Navigation
+          <ul class="nav nav-sidebar">
+            <li id="floorplan_tab11"><a href="#">
+              تغییر نقشه اتاق
+              <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+            </a></li>
+            <li id="design_tab11"><a href="#">
+              طراحی
+              <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+            </a></li>
+            <li id="items_tab11"><a href="#">
+              اضافه کردن وسیله
+              <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+            </a></li>
+          </ul>-->
+          <hr />
+          <!-- Context Menu -->
+
+          <!-- Floor textures -->
+
+
+          <!-- Wall Textures -->
+
+        </div>
+
+
+
+
+
+
+    <nav class="floating-menu" data-step="1" data-intro="با انتخاب این گزینه ها به ترتیب امکان تغییر نقشه، اضافه کردن وسیله از قبیل کابینت و وسایل آشپرخانه، طراحی دکوراسیون و جابجایی وسایل اضافه شده را خواهید داشت. در انتها راههای ارتباطی با ما در منوی ارتباط با ما مشخص شده اند.">
+        <ul class="main-menu text-center">
+             <li id="floorplan_tab"><a href="#">
+                    تغییر نقشه
+                 <i class="fa fa-edit pull-right"></i>
+                </a>
+            </li>
+
+            <li id="items_tab">
+                <a href="#" class="ripple" data-toggle="modal" data-target="#additemModal">
+                    اضافه کردن وسیله
+                    <i class="fa fa-plus-circle pull-right"></i>
+                </a>
+            </li>
+            <li id="design_tab">
+                <a href="#" class="ripple">
+                    طراحی
+                    <i class="fa fa-pencil pull-right"></i>
+                </a>
+            </li>
+            <li id="contact_tab">
+                <a href="#" class="ripple" data-toggle="modal" data-target="#contactUsModal">
+                    ارتباط با ما
+                    <i class="fa fa-envelope pull-right"></i>
+                </a>
+            </li>
+            <li id="homepagetab">
+                <a href="../" class="ripple">
+                    صفحه اصلی هرمس
+                    <i class="fa fa-home pull-right"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="menu-bg"></div>
+    </nav>
+
+
+
+
+        <div id="wallTextures" class="floating-menu col-xs-2" style="top:70%;left: 3%" >
+            <div class="panel panel-primary" >
+              <div class="panel-heading text-center">تغییر پوشش دیوار</div>
+              <div class="panel-body" style="color: #333333">
+                <div class="col-sm-6" style="padding: 3px">
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="{% static "designpage/rooms/textures/marbletiles.jpg" %}" texture-stretch="false" texture-scale="300">
+                    <img alt="Thumbnail marbletiles" style="height: 100px;" src="{% static "designpage/rooms/thumbnails/thumbnail_marbletiles.jpg" %}" />
+                  </a>
+                </div>
+                <div class="col-sm-6" style="padding: 3px">
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="{% static "designpage/rooms/textures/wallmap_yellow.png" %}" texture-stretch="true" texture-scale="">
+                    <img alt="Thumbnail wallmap yellow" style="height: 100px;" src="{% static "designpage/rooms/thumbnails/thumbnail_wallmap_yellow.png" %}" />
+                  </a>
+                </div>
+                <div class="col-sm-6" style="padding: 3px">
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="{% static "designpage/rooms/textures/light_brick.jpg" %}" texture-stretch="false" texture-scale="100">
+                    <img alt="Thumbnail light brick" style="height: 100px;" src="{% static "designpage/rooms/thumbnails/thumbnail_light_brick.jpg" %}" />
+                  </a>
+                </div>
+                  <div class="col-sm-6" style="padding: 3px">
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="{% static "designpage/rooms/textures/wallmap.png" %}" texture-stretch="false" texture-scale="100">
+                    <img alt="Thumbnail default" style="height: 100px;" src="{% static "designpage/rooms/thumbnails/wallmap.png" %}" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div id="floorTexturesDiv" class="floating-menu col-xs-2" style="top:70%;left: 3%">
+            <div class="panel panel-primary">
+              <div class="panel-heading text-center">تغییر پوشش کف</div>
+              <div class="panel-body" style="color: #333333">
+
+                <div class="col-sm-6" style="padding: 3px">
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="{% static "designpage/rooms/textures/light_fine_wood.jpg" %}" texture-stretch="false" texture-scale="300">
+                    <img alt="Thumbnail light fine wood" style="height: 100px;" src="{% static "designpage/rooms/thumbnails/thumbnail_light_fine_wood.jpg" %}" />
+                  </a>
+                </div>
+                   <div class="col-sm-6" style="padding: 3px">
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="{% static "designpage/rooms/textures/hardwood.png" %}" texture-stretch="false" texture-scale="300">
+                    <img alt="Thumbnail hard wood" style="height: 100px;" src="{% static "designpage/rooms/thumbnails/hardwood.png" %}" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div id="context-menu" class="floating-menu text-center col-xs-3" style="top:70%;left: 0">
+              <span id="context-menu-name" class="lead"></span>
+              <br /><br />
+
+
+
+            <!--<br />-->
+
+              <div class="row col-md-10 col-md-offset-1 text-center" style="margin-top: 2%">
+            <div class="panel panel-primary">
+              <div class="panel-heading">تغییر اندازه</div>
+              <div class="panel-body" style="color: #333333">
+
+                <div class="form form-horizontal" class="lead">
+                  <div class="form-group">
+                    <label class="col-sm-5 control-label">
+                       عرض
+                    </label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" id="item-width">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-5 control-label">
+                      عمق
+                    </label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" id="item-depth">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-5 control-label">
+                      ارتفاع
+                    </label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" id="item-height">
+                    </div>
+                  </div>
+                </div>
+                <!--<small><span class="text-muted">Measurements in inches.</span></small>-->
+            </div>
+
+            <label><input type="checkbox" id="fixed" /> وسیله جابجا نشود</label>
+            <br /><br />
+            </div>
+          </div>
+              <div class="row col-md-4 col-md-offset-4 text-center">
+              <button class="btn btn-block btn-danger" id="context-menu-delete">
+                <span class="glyphicon glyphicon-trash"></span>
+                حذف وسیله
+              </button>
+              </div>
+        </div>
+
+<!-- Modal to add items-->
+<div class="modal fade" id="additemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog" role="document" style="width: 50%;">
+    <div class="modal-content" style="height: 600px;" style="" >
+      <div class="modal-header text-right">
+        <h4 class="modal-title text-right" id="exampleModalLabel" style="display:inline-block">لطفا وسیله مورد نظر خود را انتخاب نمایید</h4>
+         <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">بستن پنجره</button>
+      </div>
+      <div class="modal-body text-center" style="height: 90%;">
+        <p class="text-right">لطفا وسیله مورد نظر خود را از بین دسته های وسایل آشپزخانه، وسایل کلی مانند در و پنجره و یا وسایل خانه از منوی زیر انتخاب نمایید</p>
+      <div id="add-items">
+       <div class="row" >
+              <!-- Items added here by items.js -->
+        <ul class="nav nav-tabs navbar-fixed" style="margin-bottom: 2%">
+        <li class="active"><a data-toggle="tab" href="#kitchentab">وسایل آشپزخانه</a></li>
+        <li><a data-toggle="tab" href="#generaltoolstab">وسایل کلی (در و پنجره)</a></li>
+        <li><a data-toggle="tab" href="#homeappliancetab">وسایل خانه</a></li>
+        </ul>
+          <div class="tab-content" id="items-wrapper" style="height: 400px;overflow-y: scroll;">
+            <div id="kitchentab" class="tab-pane fade in active">
+            </div>
+            <div id="generaltoolstab" class="tab-pane fade">
+            </div>
+            <div id="homeappliancetab" class="tab-pane fade">
+            </div>
+          </div>
+       </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal to contact us-->
+<div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactusModalLabel" aria-hidden="true" >
+  <div class="modal-dialog" role="document" style="width: 40%;" >
+    <div class="modal-content">
+      <div class="modal-header text-right">
+        <h4 class="modal-title text-right" id="contactusModalLabel" style="display:inline-block">ارتباط با ما</h4>
+
+      </div>
+        <div class="modal-body text-right" >
+        <h5 class="text-right">راههای ارتباطی گروه چوب و طراحی دکوراسیون هرمس</h5>
+                <div style="font-size: 13px;padding-top: 2%;padding-right: 4%;">
+                    <p><span style="margin-right: 1%;">۰۲۱-۸۸۲۴۸۲۷۸</span><i class="fa fa-phone pull-right"></i></p>
+                    <p><span style="margin-right: 1%;">۰۲۱-۶۵۵۵۶۳۹۲</span><i class="fa fa-phone pull-right"></i></p>
+                    <p><span style="margin-right: 1%;">۰۹۳۵-۴۵۵۷۰۶۹</span><i class="fa fa-mobile pull-right"></i></p>
+                    <p><span style="margin-right: 1%;">choob.hermes@gmail.com</span><i class="fa fa-envelope pull-right"></i></p>
+                    <p><span style="margin-right: 1%;">شهریار، نرسیده به باغستان، شهرک شهاب سنگ</span><i class="fa fa-home pull-right"></i></p>
+                </div>
+        </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">بستن پنجره</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+        <!-- Right Column -->
+        <div class="col-xs-9 main">
+
+          <!-- 3D Viewer -->
+          <div id="viewer">
+
+            <div id="main-controls">
+              <a class="btn btn-large btn-primary" id="salar" href="#" >راهنمای استفاده از سایت</a>
+
+              <a href="#" class="btn btn-default btn-sm" id="new" data-step="2" data-intro="با انتخاب این گزینه طراحی فعلی حذف شده و یک پلن خالی ایجاد میشود">
+                طراحی مجدد
+              </a>
+              <a href="#" class="btn btn-default btn-sm" id="saveFile" data-step="3" data-intro="برای ذخیره سازی پلن طراحی شده از این گزینه استفاده کنید">
+                ذخیره کردن طرح
+              </a>
+              <a class="btn btn-sm btn-default btn-file" data-step="4" data-intro="بارگزاری طرحی که قبلا ایجاد و ذخیره شده است">
+               <input type="file" class="hidden-input" id="loadFile">
+               بارگزاری طرح ذخیره شده
+              </a>
+            </div>
+
+            <div id="camera-controls">
+              <a href="#" class="btn btn-default bottom" id="zoom-out">
+                <span class="glyphicon glyphicon-zoom-out"></span>
+              </a>
+              <a href="#" class="btn btn-default bottom" id="reset-view">
+                <span class="glyphicon glyphicon glyphicon-home"></span>
+              </a>
+              <a href="#" class="btn btn-default bottom" id="zoom-in">
+                <span class="glyphicon glyphicon-zoom-in"></span>
+              </a>
+
+              <span>&nbsp;</span>
+
+              <a class="btn btn-default bottom" href="#" id="move-left" >
+                <span class="glyphicon glyphicon-arrow-left"></span>
+              </a>
+              <span class="btn-group-vertical">
+                <a class="btn btn-default" href="#" id="move-up">
+                  <span class="glyphicon glyphicon-arrow-up"></span>
+                </a>
+                <a class="btn btn-default" href="#" id="move-down">
+                  <span class="glyphicon glyphicon-arrow-down"></span>
+                </a>
+              </span>
+              <a class="btn btn-default bottom" href="#" id="move-right" >
+                <span class="glyphicon glyphicon-arrow-right"></span>
+              </a>
+            </div>
+
+            <div id="loading-modal">
+              <h1>Loading...</h1>
+            </div>
+          </div>
+
+          <!-- 2D Floorplanner -->
+          <div id="floorplanner">
+            <canvas id="floorplanner-canvas"></canvas>
+            <div id="floorplanner-controls">
+
+              <button id="move" class="btn btn-sm btn-default">
+                <span class="glyphicon glyphicon-move"></span>
+                جابجایی دیوار
+              </button>
+              <button id="draw" class="btn btn-sm btn-default">
+                <span class="glyphicon glyphicon-pencil"></span>
+                اضافه کردن دیوار
+              </button>
+              <button id="delete" class="btn btn-sm btn-default">
+                <span class="glyphicon glyphicon-remove"></span>
+               حذف دیوار
+              </button>
+              <span class="pull-right">
+                <button class="btn btn-primary btn-sm" id="update-floorplan">برو به طراحی</button>
+              </span>
+
+            </div>
+            <div id="draw-walls-hint">
+              Press the "Esc" key to stop drawing walls
+            </div>
+          </div>
+
+          <!-- Add Items -->
+
+
+        </div>
+        <!-- End Right Column -->
+      </div>
+    </div>
+</div>
+
+     
+      <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+   
+    
+
+    <!-- Sparkline -->
+      </body>
+<script>
+    window.onload = function() {
+        $("#wallTextures").hide();
+        $("#floorTexturesDiv").hide();
+        $("#context-menu").hide();
+
+    }
+</script>
+<script>
+    var startIntroButton = $('#salar');
+
+startIntroButton.on('click', function() {
+
+    var introJsStarted = introJs().setOptions({ 'nextLabel': 'بعدی', 'prevLabel': 'قبلی', 'skipLabel': 'خروج', 'doneLabel': 'اتمام' }).start();
+    // hiding modal on 'oncomplete' and 'exit' events
+    introJsStarted
+    .oncomplete(function() {
+    $('#additemModal').modal("hide");
+    }).onexit(function(){ $('#additemModal').modal("hide");
+    }).onchange(function(targetElement) {
+        // and show modal on Step 4
+        if($(targetElement).attr("data-step") == 5) {
+            $("#wallTextures").show();
+        }
+        // don't forget to hide modal on other steps
+        if($(targetElement).attr("data-step") != 5) {
+            $("#wallTextures").hide();
+        }
+    });
+});
+
+var showPopupButton = $('#show-popup-button');
+showPopupButton.on('click', function() {
+   $('#contactUsModal').show();
+});
+var closePopupButton = $('#close-modal-button');
+closePopupButton.on('click', function() {
+   $('#contactUsModal').hide();
+});
+</script>
+</html>
